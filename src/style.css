@@ -1,7 +1,17 @@
-.hello {
-  color: rgb(58, 107, 180);
+.main {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
 }
 
-body {
-  background-color: bisque;
+.list-box {
+  background-color: #fefefe;
+}
+
+.list-box input {
+
+}
+
+.list-box > * {
+  border-bottom: #aaa;
 }

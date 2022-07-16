@@ -1,14 +1,29 @@
-// import _ from 'lodash';
 import './style.css';
-function component() {
-  const element = document.createElement('div');
 
-  // Lodash, imported
+const listElem = document.getElementById('list');
 
-  // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+const tasksList = [
+  {
+    description: 'test 1',
+    completed: true,
+    index:2
+  },
+  {
+    description: 'test 2',
+    completed: true,
+    index:0
+  },
+  {
+    description: 'test 3',
+    completed: false,
+    index:1
+  }
+]
 
-  return element;
-}
+tasksList.sort((a, b)=>{
+  return a.index - b.index;
+})
 
-document.body.appendChild(component());
+tasksList.forEach((task) => {
+
+})
