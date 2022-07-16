@@ -4,14 +4,6 @@ class Task {
     this.completed = completed;
     this.index = index;
   }
-
-  setDescription(newDescription) {
-    this.description = newDescription;
-  }
-
-  toggleStatus() {
-    this.completed = !this.completed;
-  }
 }
 
 export default Task;

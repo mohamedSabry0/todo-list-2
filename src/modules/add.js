@@ -15,7 +15,7 @@ class AddHandler {
   addHandler(target) {
     const task = new Task(target.value, false, this.list.taskList.length);
     this.list.listAdd(task);
-    console.log(this.list.taskList)
+    console.log(this.list.taskList);
     this.Display.addTask(task, this.list);
     target.value = '';
   }

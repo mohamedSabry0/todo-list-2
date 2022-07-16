@@ -3,7 +3,7 @@ import EditRemoveHandler from "./edit_remove";
 const listElem = document.getElementById('list');
 
 class Display {
-  static addTask(task, list) {
+  static addTask(task, storage) {
     const taskCard = document.createElement('li');
     const description = document.createElement('p');
     const completion = document.createElement('input');
@@ -12,8 +12,8 @@ class Display {
     completion.checked = task.completed;
 
     completion.id = 'status';
-
-    const editRemoveHandler = new EditRemoveHandler(list);
+    description.id = 'description';
+    const editRemoveHandler = new EditRemoveHandler(storage);
 
     taskCard.addEventListener('click', editRemoveHandler);
 
@@ -22,8 +22,8 @@ class Display {
 
   }
 
-  static displayList(taskList){
-    taskList.forEach(this.addTask(task))
+  static displayList(storage){
+    storage.getList().forEach(task => this.addTask(task, storage))
   }
 }
 
