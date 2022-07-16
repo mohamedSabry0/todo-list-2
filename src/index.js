@@ -3,8 +3,6 @@ import AddHandler from './modules/add';
 import List from './modules/list';
 import Display from './modules/display';
 
-// const listElem = document.getElementById('list');
-
 const taskInput = document.getElementById('new-task');
 const tasks = new List();
 

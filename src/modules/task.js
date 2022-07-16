@@ -8,6 +8,10 @@ class Task {
   setDescription(newDescription) {
     this.description = newDescription;
   }
+
+  toggleStatus() {
+    this.completed = !this.completed;
+  }
 }
 
 export default Task;
