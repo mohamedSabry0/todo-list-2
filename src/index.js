@@ -6,23 +6,21 @@ const tasksList = [
   {
     description: 'test 1',
     completed: true,
-    index:2
+    index: 2,
   },
   {
     description: 'test 2',
     completed: true,
-    index:0
+    index: 0,
   },
   {
     description: 'test 3',
     completed: false,
-    index:1
-  }
-]
+    index: 1,
+  },
+];
 
-tasksList.sort((a, b)=>{
-  return a.index - b.index;
-})
+tasksList.sort((a, b) => a.index - b.index);
 
 tasksList.forEach((task) => {
   const taskCard = document.createElement('li');
@@ -34,4 +32,4 @@ tasksList.forEach((task) => {
 
   listElem.appendChild(taskCard);
   taskCard.append(completion, description);
-})
+});
