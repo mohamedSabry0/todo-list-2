@@ -25,5 +25,13 @@ tasksList.sort((a, b)=>{
 })
 
 tasksList.forEach((task) => {
+  const taskCard = document.createElement('li');
+  const description = document.createElement('p');
+  const completion = document.createElement('input');
+  completion.type = 'checkbox';
+  description.textContent = task.description;
+  completion.checked = task.completed;
 
+  listElem.appendChild(taskCard);
+  taskCard.append(completion, description);
 })
