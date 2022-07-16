@@ -11,6 +11,7 @@ class Display {
 
     listElem.appendChild(taskCard);
     taskCard.append(completion, description);
+
   }
 
   static displayList(list){

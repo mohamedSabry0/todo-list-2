@@ -1,6 +1,6 @@
 import Task from "./task";
 
-class AddRemoveHandler {
+class AddHandler {
   constructor(list, Display) {
     this.list = list;
     this.Display = Display;
@@ -20,4 +20,4 @@ class AddRemoveHandler {
   }
 }
 
-export default AddRemoveHandler;
+export default AddHandler;
