@@ -22,7 +22,9 @@ class Display {
   }
 
   static displayList(storage) {
-    storage.getList().forEach((task) => this.addTask(task, storage));
+    if (storage.getList !== []) {
+      storage.getList().forEach((task) => this.addTask(task, storage));
+    }
   }
 }
 
