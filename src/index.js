@@ -1,35 +1,12 @@
 import './style.css';
+import AddHandler from './modules/add.js';
+import Storage from './modules/storage.js';
+import Display from './modules/display.js';
 
-const listElem = document.getElementById('list');
+const taskInput = document.getElementById('new-task');
+const storage = new Storage();
 
-const tasksList = [
-  {
-    description: 'test 1',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'test 2',
-    completed: true,
-    index: 0,
-  },
-  {
-    description: 'test 3',
-    completed: false,
-    index: 1,
-  },
-];
+const addHandler = new AddHandler(storage, Display);
+Display.displayList(storage);
 
-tasksList.sort((a, b) => a.index - b.index);
-
-tasksList.forEach((task) => {
-  const taskCard = document.createElement('li');
-  const description = document.createElement('p');
-  const completion = document.createElement('input');
-  completion.type = 'checkbox';
-  description.textContent = task.description;
-  completion.checked = task.completed;
-
-  listElem.appendChild(taskCard);
-  taskCard.append(completion, description);
-});
+taskInput.addEventListener('keyup', addHandler);
