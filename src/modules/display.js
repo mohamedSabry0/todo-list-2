@@ -1,4 +1,4 @@
-import EditRemoveHandler from "./edit_remove";
+import EditRemoveHandler from './edit_remove.js';
 
 const listElem = document.getElementById('list');
 
@@ -19,11 +19,10 @@ class Display {
 
     listElem.appendChild(taskCard);
     taskCard.append(completion, description);
-
   }
 
-  static displayList(storage){
-    storage.getList().forEach(task => this.addTask(task, storage))
+  static displayList(storage) {
+    storage.getList().forEach((task) => this.addTask(task, storage));
   }
 }
 

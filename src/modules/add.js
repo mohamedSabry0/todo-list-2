@@ -1,4 +1,4 @@
-import Task from "./task";
+import Task from './task.js';
 
 class AddHandler {
   constructor(list, Display) {
@@ -6,8 +6,8 @@ class AddHandler {
     this.Display = Display;
   }
 
-  handleEvent(event){
-    if(event.key === 'Enter'){
+  handleEvent(event) {
+    if (event.key === 'Enter') {
       this.addHandler(event.target);
     }
   }
@@ -15,7 +15,6 @@ class AddHandler {
   addHandler(target) {
     const task = new Task(target.value, false, this.list.taskList.length);
     this.list.listAdd(task);
-    console.log(this.list.taskList);
     this.Display.addTask(task, this.list);
     target.value = '';
   }

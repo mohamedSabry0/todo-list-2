@@ -1,20 +1,3 @@
-class List {
-  constructor(taskList = []) {
-    this.taskList = taskList;
-  }
-
-  sort() {
-    this.taskList.sort((a, b) => a.index - b.index);
-  }
-
-
-  listAdd(task) {
-    this.taskList.push(task);
-  }
-
-}
-
-// export default List;
 class Storage {
   constructor() {
     this.taskList = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -29,8 +12,8 @@ class Storage {
     localStorage.setItem('tasks', JSON.stringify(this.taskList));
   }
 
-  updateTask(list) {
-    localStorage.setItem('tasks', JSON.stringify(list));
+  updateTask() {
+    localStorage.setItem('tasks', JSON.stringify(this.taskList));
   }
 
   listAdd(task) {
@@ -40,6 +23,8 @@ class Storage {
 
   listRemove(taskIndex) {
     this.taskList = this.taskList.filter((task) => task.index !== taskIndex);
+
+    // eslint-disable-next-line no-return-assign
     this.taskList.forEach((task, index) => task.index = index);
 
     localStorage.setItem('tasks', JSON.stringify(this.taskList));
