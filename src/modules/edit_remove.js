@@ -43,6 +43,7 @@ class EditRemoveHandler {
       newDesc.textContent = event.target.value;
       this.list.taskList[index].description = event.target.value;
       this.list.updateTask();
+      event.target.parentElement.getElementsByClassName('remove')[0].remove();
       event.target.parentElement.replaceChild(newDesc, event.target);
     }
   }
