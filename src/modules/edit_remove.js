@@ -8,15 +8,15 @@ class EditRemoveHandler {
   }
 
   handleEvent(event) {
-    if (event.target.id === 'description') this[event.target.id](event.target);
+    if (event.target.id === 'status' || event.target.id === 'description') this[event.target.id](event.target);
   }
 
   // update status
-  // status(target){
-  //   let index = getDisplayIndex(target);
-  //   this.list.taskList[index].completed = !this.completed;
-  //   this.list.updateTask(this.list.taskList);
-  // }
+  status(target) {
+    const index = getDisplayIndex(target);
+    this.list.taskList[index].completed = !this.list.taskList[index].completed;
+    this.list.updateTask(this.list.taskList);
+  }
 
   // update description
   description(target) {

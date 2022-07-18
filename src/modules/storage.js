@@ -23,17 +23,17 @@ class Storage {
 
   listRemove(taskIndex) {
     this.taskList = this.taskList.filter((task) => task.index !== taskIndex);
-
     // eslint-disable-next-line no-return-assign
     this.taskList.forEach((task, index) => task.index = index);
-
     localStorage.setItem('tasks', JSON.stringify(this.taskList));
   }
 
-  // listRemoveCompleted() {
-  //   this.taskList = this.taskList.filter((task) => !task.completed);
-  //   localStorage.setItem('tasks', JSON.stringify(this.taskList));
-  // }
+  listRemoveCompleted() {
+    this.taskList = this.taskList.filter((task) => !task.completed);
+    // eslint-disable-next-line no-return-assign
+    this.taskList.forEach((task, index) => task.index = index);
+    localStorage.setItem('tasks', JSON.stringify(this.taskList));
+  }
 }
 
 export default Storage;
