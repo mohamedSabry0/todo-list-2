@@ -8,6 +8,9 @@
 - Javascript
 - webpack
 
+## Live Demo
+[gh-pages deployment](https://mohamedsabry0.github.io/todo-list-2/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
