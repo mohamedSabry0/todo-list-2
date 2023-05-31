@@ -15,19 +15,33 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 - A web browser
+- [Node](https://nodejs.org/en/download/)
+- [git](https://git-scm.com/downloads)
 
 ### Setup
 
-- Clone or download the project to your local machine
+Clone this repository to your desired folder:
+
+```sh
+  cd my-folder
+  git clone git@github.com:mohamedSabry0/todo-list-2.git
+```
 
 - Change to the project's root directory
 
+  ```sh
+    cd todo-list-2
+  ```
+
 - Make sure to checkout to the feature branch
+
+  ```sh
+    git checkout list-structure
+  ```
 
 - Run `npm install`
 
 - Run `npm run start`
-
 
 ## Author
 
